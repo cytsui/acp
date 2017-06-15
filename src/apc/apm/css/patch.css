@@ -1,0 +1,53 @@
+.share_app .link_app, .share_app .share_user{
+    font-size: 14px;
+    font-family: \9ED1\4F53;
+    color: #fff;
+    float: right;
+    line-height: 15px;
+    margin: 11px 4px 0 0;
+    padding: 6px 5px;
+    display: block;
+    background: #ff5400;
+    border-radius: 5px;
+}
+
+/*flip*/
+.viewport-flip {
+	-webkit-perspective: 1000; perspective: 1000;
+}
+.flip {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(0);
+	backface-visibility: hidden;
+	transform: translateX(0);
+}
+.flip.out {
+	-webkit-transform: rotateX(-90deg) scale(.9);
+	-webkit-animation-name: flipouttoleft;
+	-webkit-animation-duration: 175ms;
+	transform: rotateX(-90deg) scale(.9);
+	animation-name: flipouttoleft;
+	animation-duration: 175ms;
+}
+.flip.in {
+	-webkit-animation-name: flipintoright;
+	-webkit-animation-duration: 225ms;
+	animation-name: flipintoright;
+	animation-duration: 225ms;
+}
+@-webkit-keyframes flipintoright {
+    from { -webkit-transform: rotateX(90deg) scale(.9); }
+    to { -webkit-transform: rotateX(0); }
+}
+@keyframes flipintoright {
+    from { transform: rotateY(90deg) scale(.9); }
+    to { transform: rotateY(0); }
+}
+@-webkit-keyframes flipouttoleft {
+    from { -webkit-transform: rotateX(0); }
+    to { -webkit-transform: rotateX(-90deg) scale(.9); }
+}
+@keyframes flipouttoleft {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(-90deg) scale(.9); }
+}
